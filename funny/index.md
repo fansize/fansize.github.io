@@ -6,8 +6,8 @@ layout: home
     <div class="section">
         <ul class="artical-cate">
             <li><a href="/"><span>Life</span></a></li>
-            <li style="text-align:center"><a href="/opinion"><span>Funny</span></a></li>
-            <li class="on" style="text-align:right"><a href="/project"><span>About</span></a></li>
+            <li style="text-align:center"><a href="/funny"><span>Funny</span></a></li>
+            <li class="on" style="text-align:right"><a href="/about"><span>About</span></a></li>
         </ul>
 
         <div class="cate-bar"><span id="cateBar"></span></div>
