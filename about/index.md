@@ -12,6 +12,13 @@ layout: home
 
         <div class="cate-bar"><span id="cateBar"></span></div>
 
+		<div class="funnytext">
+			Fansize({
+				name:tl
+				dream:df
+		})
+		</div>
+
         <ul class="artical-list">
         {% for post in site.categories.project %}
             <li>
@@ -27,9 +34,4 @@ layout: home
     </div>
 </div>
 
-<div class="funnytext">
-	Fansize({
-		name:tl
-		dream:df
-})
-</div>
+
