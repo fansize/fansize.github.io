@@ -26,3 +26,10 @@ layout: home
     <div class="aside">
     </div>
 </div>
+
+<div class="funnytext">
+	Fansize({
+		name:tl
+		dream:df
+})
+</div>

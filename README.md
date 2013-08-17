@@ -1,2 +1,9 @@
-从Beiyuu修改來的jekyll博客。
-先写这么多吧
+#Fansize's Blog
+
+##从Beiyuu修改來的jekyll博客。
+
+>Life
+>Funny
+>About
+
+[http://loverenran.com]:loverenran.com
