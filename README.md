@@ -2,8 +2,8 @@
 
 ##从Beiyuu修改來的jekyll博客。
 
->Life
->Funny
->About
++>Life
++>Funny
++>About
 
-[http://loverenran.com]:loverenran.com
+[http://loverenran.com]:loverenran.com "http://loverenran.com"
