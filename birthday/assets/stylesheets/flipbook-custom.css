@@ -225,10 +225,7 @@ nav.bb-custom-nav a:first-child {
 	right: 55px;
 	margin-top: -130px;
 	border-radius: 50%;
-	-webkit-box-shadow: 3px 3px 8px 1px #c4c4bc inset;
-	-moz-box-shadow: 3px 3px 8px 1px #c4c4bc inset;
-	box-shadow: 3px 3px 8px 1px #c4c4bc inset;
-	background-color: #f7f5ef;
+	
 	z-index: 0;
 }
 
