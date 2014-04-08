@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>2048</title>
+  <link href="style/main-4.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+</head>
+<body>
+  <div class="container">
+    <div class="heading">
+      <h2 class="title">青番茄版2048</h2>
+      <p class="game-intro">珍爱生命，远离本游戏！</p>
+    </div>
+    <div class="above-game">
+      <a class="restart-button">New Game</a>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">			
+	        <a class="keep-playing-button">Keep going</a>			
+          <a class="retry-button">Try again</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+              <div class="grid-row">
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                </div>
+              <div class="grid-row">
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                </div>
+              <div class="grid-row">
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                </div>
+              <div class="grid-row">
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                </div>
+            </div>
+
+      <div class="tile-container">
+      </div>
+    </div>
+    
+    <hr>
+	<p>
+	操作：使用键盘的"上下左右"操作即可
+    </p>
+	<hr>
+    <p>
+	说明：
+	最近比较火的2048游戏，我套入了番茄的各阶段。
+	</p>
+	<p style="font-size:24px;color:green;font-weight:bold;">
+	PS：不要尝试点出“青番茄”，我对你的手指和键盘表示担心
+	<p>进化历程：</p>
+	<p style="font-size:24px;color:green;font-weight:bold;">
+	番茄仔>番茄根>番茄叶>番茄花>番茄树>番茄果>番茄汁>番茄酱>绿番茄>黄番茄>红番茄>青番茄
+	</p>	
+	
+
+	<hr>
+    <p style="font-size:36px;color:red;font-weight:bold;">珍爱生命，适度游戏……同学们偶尔玩个十来分钟可以理解，时间再长就有点浪费生命了啊……</p>
+    <p style="font-size:26px;font-weight:bold;">大家至少不要沉迷于尝试挑战16384之后的高度吧，这只是耗时间（每一次有效按键+2，要加到16384要按8000多下，一秒钟5下也要半个多小时，每提升一级需要的时间都翻倍）
+	</p>
+    <hr>
+    <p>
+    <strong class="important">Note:</strong> This site is <span style="color:red;font-weight:bold;">NOT</span> the official version of 2048. The origin version is created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
+    </p>
+</div>
+  <script>
+    var my_list = {2:'番茄仔',4:'番茄根',8:'番茄叶',16:'番茄花',32:'番茄树',64:'番茄果',128:'番茄汁',256:'番茄酱',512:'绿番茄',1024:'黄番茄',2048:'红番茄',4096:'青番茄',8192:'~~~~',16384:'8192',32768:'16384',65536:'32768',131072:'65536',262144:'131072',524288:'262144',1048576:'524288',2097152:'1048576',4194304:'2097152',8388608:'4194304',16777216:'8388608',33554432:'16777216',67108864:'33554432',134217728:'67108864',268435456:'134217728',536870912:'268435456',1073741824:'536870912',2147483648:'1073741824'}
+    var my_mark = {2:'番茄仔',4:'番茄根',8:'番茄叶',16:'番茄花',32:'番茄树',64:'番茄果',128:'番茄汁',256:'番茄酱',512:'绿番茄',1024:'黄番茄',2048:'红番茄',4096:'青番茄',8192:'~~~~',16384:'8192',32768:'16384',65536:'32768',131072:'65536',262144:'131072',524288:'262144',1048576:'524288',2097152:'1048576',4194304:'2097152',8388608:'4194304',16777216:'8388608',33554432:'16777216',67108864:'33554432',134217728:'67108864',268435456:'134217728',536870912:'268435456',1073741824:'536870912',2147483648:'1073741824'}
+    var my_goal = 4096;
+    var my_win  = 'You Win!';
+  </script>
+  <script src="js/bind_polyfill.js"></script>
+  <script src="js/classlist_polyfill.js"></script>
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_storage_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script>
+    // Wait till the browser is ready to render the game (avoids glitches)
+    window.requestAnimationFrame(function (){
+      var game = new GameManager(4, KeyboardInputManager, HTMLActuator, LocalStorageManager);
+          });  
+  </script>
+</body>
+</html>
